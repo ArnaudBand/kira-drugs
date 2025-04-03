@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#172554" />
+    </linearGradient>
+    
+    <!-- Filter for glow effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Pattern for texture -->
+    <pattern id="texture" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#bg-gradient)" />
+      <rect width="100" height="1" fill="#ffffff" opacity="0.03" />
+    </pattern>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1200" height="800" fill="url(#texture)" />
+  
+  <!-- Abstract wave elements -->
+  <path d="M0,600 C300,550 450,750 600,650 S900,500 1200,600 L1200,800 L0,800 Z" 
+        fill="#3b82f6" opacity="0.15" />
+  <path d="M0,650 C250,600 550,700 800,600 S1050,550 1200,650 L1200,800 L0,800 Z" 
+        fill="#60a5fa" opacity="0.1" />
+  
+  <!-- Connection circles and paths -->
+  <g filter="url(#glow)">
+    <!-- Support network visualization -->
+    <circle cx="300" cy="400" r="8" fill="#93c5fd" opacity="0.8" />
+    <circle cx="500" cy="320" r="6" fill="#93c5fd" opacity="0.8" />
+    <circle cx="650" cy="480" r="10" fill="#93c5fd" opacity="0.8" />
+    <circle cx="800" cy="350" r="7" fill="#93c5fd" opacity="0.8" />
+    <circle cx="950" cy="420" r="9" fill="#93c5fd" opacity="0.8" />
+    
+    <!-- Connection lines -->
+    <path d="M300,400 Q400,310 500,320" stroke="#93c5fd" stroke-width="1.5" opacity="0.4" fill="none" />
+    <path d="M500,320 Q600,400 650,480" stroke="#93c5fd" stroke-width="1.5" opacity="0.4" fill="none" />
+    <path d="M650,480 Q750,380 800,350" stroke="#93c5fd" stroke-width="1.5" opacity="0.4" fill="none" />
+    <path d="M800,350 Q850,400 950,420" stroke="#93c5fd" stroke-width="1.5" opacity="0.4" fill="none" />
+    <path d="M300,400 Q550,500 800,350" stroke="#93c5fd" stroke-width="1" opacity="0.3" fill="none" />
+    <path d="M500,320 Q700,350 950,420" stroke="#93c5fd" stroke-width="1" opacity="0.3" fill="none" />
+  </g>
+  
+  <!-- Abstract floating elements -->
+  <g opacity="0.6">
+    <path d="M100,200 Q150,150 200,200 T300,200 T400,200 T500,200" stroke="#bfdbfe" stroke-width="2" fill="none" />
+    <path d="M700,150 Q750,100 800,150 T900,150 T1000,150" stroke="#bfdbfe" stroke-width="2" fill="none" />
+  </g>
+  
+  <!-- Rising path symbolizing growth and recovery -->
+  <path d="M-50,800 C100,750 200,650 300,700 S500,600 600,650 S800,600 900,550 S1100,500 1250,600" 
+        stroke="#a5b4fc" stroke-width="3" fill="none" opacity="0.6" stroke-linecap="round" />
+        
+  <!-- Light particles -->
+  <g>
+    <circle cx="200" cy="200" r="2" fill="#ffffff" opacity="0.8" />
+    <circle cx="400" cy="150" r="1.5" fill="#ffffff" opacity="0.7" />
+    <circle cx="600" cy="250" r="2" fill="#ffffff" opacity="0.8" />
+    <circle cx="800" cy="180" r="1.5" fill="#ffffff" opacity="0.7" />
+    <circle cx="1000" cy="220" r="2" fill="#ffffff" opacity="0.8" />
+    <circle cx="300" cy="300" r="1.5" fill="#ffffff" opacity="0.6" />
+    <circle cx="500" cy="200" r="1" fill="#ffffff" opacity="0.5" />
+    <circle cx="700" cy="300" r="1.5" fill="#ffffff" opacity="0.6" />
+    <circle cx="900" cy="250" r="1" fill="#ffffff" opacity="0.5" />
+    <circle cx="1100" cy="300" r="1.5" fill="#ffffff" opacity="0.6" />
+  </g>
+</svg>
