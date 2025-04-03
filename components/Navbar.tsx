@@ -19,13 +19,8 @@ export default function Navbar({ isScrolled }: NavbarProps) {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="relative h-10 w-10">
-                <Image 
-                  src="/logo.svg" 
-                  alt="New Horizons Logo"
-                  fill
-                  className="object-contain" 
-                />
+              <div className="">
+                <div className='border rounded-full bg-amber-400 p-3 w-2 h-2' />
               </div>
               <span className={`text-xl font-bold ${isScrolled ? 'text-blue-600' : 'text-white'}`}>
                 New Horizons
