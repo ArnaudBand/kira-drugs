@@ -23,7 +23,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                 <div className='border rounded-full bg-amber-400 p-3 w-2 h-2' />
               </div>
               <span className={`text-xl font-bold ${isScrolled ? 'text-blue-600' : 'text-white'}`}>
-                New Horizons
+                Kira Drugs
               </span>
             </Link>
           </div>
