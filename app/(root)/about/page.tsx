@@ -110,85 +110,85 @@ export default function AboutPage() {
 
       {/* Hero Section */}
       <Hero>
-        <div className="flex items-center h-full justify-center">
-          {/* Abstract Shapes */}
-          <div className="absolute top-20 right-20 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-          <div className="absolute bottom-20 left-20 w-72 h-72 bg-teal-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-          <div className="absolute top-1/2 left-1/3 w-56 h-56 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
-          <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-16">
-                <RecoveryIcon />
-                <motion.h1
-                  className="text-4xl md:text-5xl font-bold text-slate-900 mb-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7 }}
-                >
-                  Youth Recovery Alliance
-                </motion.h1>
-                <motion.p
-                  className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.2 }}
-                >
-                  Empowering young people to overcome addiction and build
-                  resilient futures through compassion, community, and
-                  evidence-based support.
-                </motion.p>
+        {/* Hero Section */}
+        <section
+          className="flex items-center justify-center min-h-screen overflow-hidden max-w-7xl mx-auto relative"
+          aria-labelledby="hero-heading"
+        >
+          {/* Background Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-indigo-100 blur-3xl opacity-30" />
+            <div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-teal-100 blur-3xl opacity-20" />
+          </div>
+
+          {/* Content Container */}
+          <div className="container mx-auto px-8 py-12 relative z-10">
+            <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+              {/* Visual Indicator */}
+              <div className="mb-6">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
+                  <span className="w-2 h-2 rounded-full bg-indigo-500 mr-2"></span>
+                  Making a difference since 2005
+                </span>
               </div>
 
-              {/* Navigation Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-                {[
-                  {
-                    id: "mission",
-                    icon: <Lightbulb className="h-8 w-8 text-blue-500" />,
-                    title: "Our Mission",
-                    description: "What drives our work every day",
-                  },
-                  {
-                    id: "approach",
-                    icon: <HandHelping className="h-8 w-8 text-blue-500" />,
-                    title: "Our Approach",
-                    description: "How we make lasting change",
-                  },
-                  {
-                    id: "impact",
-                    icon: <Heart className="h-8 w-8 text-blue-500" />,
-                    title: "Our Impact",
-                    description: "The difference we`re making",
-                  },
-                ].map((item) => (
-                  <motion.div
-                    key={item.id}
-                    whileHover={{ y: -5 }}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                  >
-                    <Card
-                      className="h-full cursor-pointer hover:shadow-lg transition-all"
-                      onClick={() => scrollToSection(item.id)}
-                    >
-                      <CardHeader className="pb-2">
-                        <div className="mb-2">{item.icon}</div>
-                        <CardTitle>{item.title}</CardTitle>
-                        <CardDescription>{item.description}</CardDescription>
-                      </CardHeader>
-                      <CardContent className="pt-0 flex justify-end">
-                        <Button variant="ghost" size="sm">
-                          Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
+              {/* Main Heading with Animation Class */}
+              <h1
+                id="hero-heading"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 tracking-tight leading-tight"
+              >
+                <span className="block">Empowering Youth</span>
+                <span className="block text-white">Through Recovery</span>
+              </h1>
+
+              {/* Subheading with improved readability */}
+              <p className="text-lg md:text-xl text-slate-700 mb-10 max-w-2xl leading-relaxed">
+                At Youth Recovery Alliance, we believe in the power of
+                community, compassion, and evidence-based practices to help
+                young people reclaim their lives from addiction.
+              </p>
+
+              {/* CTA Section with Multiple Actions */}
+              <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+                <button
+                  onClick={() => scrollToSection("mission")}
+                  className="px-8 py-4 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  aria-label="Learn more about our mission"
+                >
+                  Learn More
+                </button>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="px-8 py-4 rounded-lg bg-white text-indigo-600 border border-indigo-200 font-medium hover:bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  aria-label="Contact us for assistance"
+                >
+                  Get Support
+                </button>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+            <span className="text-sm text-slate-500 mb-2">
+              Scroll to explore
+            </span>
+            <svg
+              className="w-6 h-6 text-slate-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              ></path>
+            </svg>
+          </div>
+        </section>
       </Hero>
 
       {/* Mission Section */}
