@@ -39,7 +39,7 @@ export default function MissionStatement() {
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mb-8"></div>
             
             <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-              At New Horizons, we believe that addiction recovery is not just about abstinence—it's about helping young people discover their strengths, rebuild relationships, and create meaningful futures.
+              At Kira Drugs, we believe that addiction recovery is not just about abstinence—it's about helping young people discover their strengths, rebuild relationships, and create meaningful futures.
             </p>
             
             <p className="text-gray-700 text-lg mb-8 leading-relaxed">
