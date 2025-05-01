@@ -17,7 +17,7 @@ export default function ProgramsOverview() {
         "Evidence-based treatment approaches",
         "Flexible scheduling for school/work compatibility"
       ],
-      image: "/images/outpatient-program.jpg"
+      image: "/images/outpatient-program.jpeg"
     },
     residential: {
       title: "Residential Treatment",
@@ -29,7 +29,7 @@ export default function ProgramsOverview() {
         "Life skills development",
         "Structured daily routines with therapeutic activities"
       ],
-      image: "/images/residential-program.jpg"
+      image: "/images/residential-program.jpeg"
     },
     aftercare: {
       title: "Aftercare & Continuing Support",
@@ -41,7 +41,7 @@ export default function ProgramsOverview() {
         "Relapse prevention planning",
         "Family support resources"
       ],
-      image: "/images/aftercare-program.jpg"
+      image: "/images/aftercare-program.jpeg"
     },
     mentorship: {
       title: "Peer Mentorship",
@@ -53,7 +53,7 @@ export default function ProgramsOverview() {
         "Leadership development",
         "Healthy recreational activities"
       ],
-      image: "/images/mentorship-program.jpg"
+      image: "/images/mentorship-program.jpeg"
     }
   };
   
@@ -96,7 +96,8 @@ export default function ProgramsOverview() {
               <Image
                 src={programs[activeTab].image}
                 alt={programs[activeTab].title}
-                fill
+                width={300}
+                height={300}
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent lg:bg-transparent flex items-end lg:hidden">
