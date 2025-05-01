@@ -14,7 +14,7 @@ const SuccessStory: React.FC<SuccessStoryProps> = ({ name, age, yearsClean, quot
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
       <div className="relative h-64 w-full">
         <Image 
-          src={image || "/api/placeholder/400/320"} 
+          src={image}
           alt={`${name}'s success story`}
           fill
           className="object-cover"
@@ -38,21 +38,21 @@ const SuccessStories = () => {
       age: 21,
       yearsClean: 2,
       quote: "This program helped me reclaim my future. I'm now in college studying psychology to help others like me.",
-      image: "/api/placeholder/400/320"
+      image: "/images/aftercare-program.jpeg"
     },
     {
       name: "Mia",
       age: 19,
       yearsClean: 1.5,
       quote: "I found a community that understands me. The mentors here gave me hope when I had none left.",
-      image: "/api/placeholder/400/320"
+      image: "/images/aftercare-program.jpeg"
     },
     {
       name: "Jason",
       age: 23,
       yearsClean: 3,
       quote: "Recovery isn't linear, but with the right support, it's possible. I'm living proof of that.",
-      image: "/api/placeholder/400/320"
+      image: "/images/outpatient-program.jpeg"
     }
   ];
 
