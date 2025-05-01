@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 // Component imports
 import Navbar from "@/components/Navbar";
@@ -13,8 +13,11 @@ import ResourcesSection from "../../components/ResourcesSection";
 import ContactCTA from "../../components/ContactCTA";
 import Footer from "../../components/Footer";
 import { Link } from "lucide-react";
+import {useRouter} from "next/navigation";
+import {Button} from "@/components/ui/button";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <main>
@@ -37,7 +40,7 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Link href="/get-help" className="btn-hero-primary">
+                <Button onClick={() => router.push("/get-help")} className="flex space-x-0.5 bg-blue-300 text-black/60 hover:text-white">
                   <span>Find Support</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -53,21 +56,21 @@ export default function Home() {
                       d="M17 8l4 4m0 0l-4 4m4-4H3"
                     />
                   </svg>
-                </Link>
-                <Link href="/programs" className="btn-hero-secondary">
+                </Button>
+                <Button onClick={() => router.push("/programs")} className="bg-white/85 text-black/60 hover:text-white">
                   <span>Our Programs</span>
-                </Link>
+                </Button>
               </div>
 
               <div className="mt-12 md:mt-16 flex items-center">
                 <p className="text-blue-100 mr-6">
-                  24/7 Confidential Helpline:
+                  Contact:
                 </p>
                 <a
-                  href="tel:18005551234"
+                  href="tel:25762682648"
                   className="text-white text-xl font-bold hover:text-blue-300 transition-colors"
                 >
-                  1-800-555-1234
+                  (257 62682648)
                 </a>
               </div>
             </div>
