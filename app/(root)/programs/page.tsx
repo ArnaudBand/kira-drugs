@@ -129,6 +129,202 @@ const TestimonialCard = ({ quote, author, role, image }: { quote: string; author
   </Card>
 );
 
+const RecoveryPathways = ({ activeSection }: { activeSection: string}) => {
+  // Comprehensive pathways data with unique content for each tab
+  const pathwaysContent = [
+    {
+      id: "youth",
+      name: "Youth (14-17)",
+      content:
+          "Our adolescent pathway is designed with appropriate supervision, educational support, and family integration. Treatment approaches are developmentally tailored with an emphasis on identity formation, peer relationships, and appropriate independence.",
+      components: [
+        "Age-appropriate group therapy sessions",
+        "School coordination and academic support",
+        "Higher level of family involvement",
+        "Emphasis on developing healthy peer relationships",
+        "Special focus on identity formation and self-esteem"
+      ],
+      outcomes: [
+        "Improved family functioning and communication",
+        "Academic success and school engagement",
+        "Development of healthy coping skills",
+        "Strong foundation for transition to adulthood",
+        "Reduced risk behaviors and increased safety"
+      ]
+    },
+    {
+      id: "young-adults",
+      name: "Young Adults (18-25)",
+      content:
+          "Our young adult pathway balances autonomy with support. It focuses on life transitions, career development, and adult relationship skills while addressing the unique neurological and social development happening during this formative period.",
+      components: [
+        "Life skills training for independent living",
+        "Career exploration and vocational support",
+        "Focus on adult relationship development",
+        "Financial literacy and responsibility training",
+        "Assistance with educational goals and planning"
+      ],
+      outcomes: [
+        "Stable housing and financial independence",
+        "Progress toward meaningful education/career goals",
+        "Development of healthy adult relationships",
+        "Improved decision-making abilities",
+        "Strong recovery community connections"
+      ]
+    },
+    {
+      id: "early",
+      name: "Early Recovery",
+      content:
+          "For those just beginning their recovery journey, this pathway provides stability, intensive support, and foundation-building. It focuses on safety, immediate needs, withdrawal management, and establishing basic recovery skills.",
+      components: [
+        "Intensive monitoring and support structure",
+        "Basic recovery skills development",
+        "Addressing immediate physical and safety needs",
+        "Creating stable daily routines",
+        "Introduction to recovery principles and community"
+      ],
+      outcomes: [
+        "Sustained abstinence from substances",
+        "Stabilization of basic life functioning",
+        "Development of crisis management skills",
+        "Identification of triggers and risk factors",
+        "Building foundation for long-term recovery"
+      ]
+    },
+    {
+      id: "sustained",
+      name: "Sustained Recovery",
+      content:
+          "For those with some recovery time, this pathway focuses on growth, purpose development, and building a meaningful life in recovery. It emphasizes education, career, relationships, and deeper healing work.",
+      components: [
+        "Advanced recovery skill development",
+        "Deeper trauma healing work",
+        "Focus on purpose and meaning in life",
+        "Leadership and mentorship opportunities",
+        "Long-term life planning and goal setting"
+      ],
+      outcomes: [
+        "Meaningful contribution to community",
+        "Development of recovery capital",
+        "Healthy intimate and family relationships",
+        "Personal growth beyond substance use",
+        "Sustainable recovery lifestyle"
+      ]
+    },
+    {
+      id: "co-occurring",
+      name: "Co-occurring Mental Health",
+      content:
+          "This specialized pathway integrates mental health treatment with addiction recovery services. It provides coordinated care for young people dealing with both substance use disorders and mental health challenges.",
+      components: [
+        "Integrated mental health and substance use treatment",
+        "Medication management when appropriate",
+        "Trauma-specific interventions",
+        "Specialized therapeutic approaches (DBT, CBT, etc.)",
+        "Symptom management and coping strategies"
+      ],
+      outcomes: [
+        "Reduction in mental health symptoms",
+        "Improved medication adherence when prescribed",
+        "Development of dual-diagnosis management skills",
+        "Enhanced emotional regulation abilities",
+        "Integration of mental health and recovery identities"
+      ]
+    }
+  ];
+
+  return (
+      <section
+          id="pathways"
+          className={`py-16 px-4 sm:px-6 lg:px-8 bg-blue-50 ${
+              activeSection === "pathways" ? "scroll-mt-16" : ""
+          }`}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                Recovery Pathways
+              </h2>
+              <div className="w-20 h-1 bg-blue-500 mb-6"></div>
+            </div>
+            <Coffee className="h-16 w-16 text-blue-500 mt-4 md:mt-0" />
+          </div>
+
+          <div className="mb-10">
+            <p className="text-lg text-slate-700 mb-8">
+              We recognize that recovery isn't one-size-fits-all. Our pathways
+              approach allows us to tailor our services to meet specific needs
+              based on age, recovery stage, and co-occurring conditions.
+            </p>
+          </div>
+
+          <Tabs defaultValue="youth" className="w-full">
+            <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 mb-8">
+              {pathwaysContent.map((pathway) => (
+                  <TabsTrigger key={pathway.id} value={pathway.id} className={'cursor-pointer'}>
+                    {pathway.name}
+                  </TabsTrigger>
+              ))}
+            </TabsList>
+
+            {pathwaysContent.map((pathway) => (
+                <TabsContent key={pathway.id} value={pathway.id}>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>{pathway.name} Pathway</CardTitle>
+                      <CardDescription>
+                        Tailored recovery support for specific needs
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg mb-6">{pathway.content}</p>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        <div className="bg-white rounded-lg p-4 border border-blue-100">
+                          <h4 className="font-medium text-lg mb-2 text-blue-600">
+                            Key Components
+                          </h4>
+                          <ul className="space-y-2">
+                            {pathway.components.map((component, index) => (
+                                <li key={index} className="flex items-start">
+                                  <CheckCircle className="h-5 w-5 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
+                                  <span>{component}</span>
+                                </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="bg-white rounded-lg p-4 border border-blue-100">
+                          <h4 className="font-medium text-lg mb-2 text-blue-600">
+                            Expected Outcomes
+                          </h4>
+                          <ul className="space-y-2">
+                            {pathway.outcomes.map((outcome, index) => (
+                                <li key={index} className="flex items-start">
+                                  <Star className="h-5 w-5 mr-2 mt-0.5 text-yellow-500 flex-shrink-0" />
+                                  <span>{outcome}</span>
+                                </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </CardContent>
+                    <CardFooter>
+                      <Button className="w-full">
+                        Learn More About This Pathway
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                </TabsContent>
+            ))}
+          </Tabs>
+        </div>
+      </section>
+  );
+};
+
 export default function ProgramsPage() {
   const [activeSection, setActiveSection] = useState("");
 
@@ -378,107 +574,7 @@ export default function ProgramsPage() {
       </section>
 
       {/* Pathways Section */}
-      <section
-        id="pathways"
-        className={`py-16 px-4 sm:px-6 lg:px-8 bg-blue-50 ${
-          activeSection === "pathways" ? "scroll-mt-16" : ""
-        }`}
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
-            <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                Recovery Pathways
-              </h2>
-              <div className="w-20 h-1 bg-blue-500 mb-6"></div>
-            </div>
-            <Coffee className="h-16 w-16 text-blue-500 mt-4 md:mt-0" />
-          </div>
-
-          <div className="mb-10">
-            <p className="text-lg text-slate-700 mb-8">
-              We recognize that recovery isn't one-size-fits-all. Our pathways
-              approach allows us to tailor our services to meet specific needs
-              based on age, recovery stage, and co-occurring conditions.
-            </p>
-          </div>
-
-          <Tabs defaultValue="youth" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 mb-8">
-              <TabsTrigger value="youth">Youth (14-17)</TabsTrigger>
-              <TabsTrigger value="young-adults">
-                Young Adults (18-25)
-              </TabsTrigger>
-              <TabsTrigger value="early">Early Recovery</TabsTrigger>
-              <TabsTrigger value="sustained">Sustained Recovery</TabsTrigger>
-              <TabsTrigger value="co-occurring">
-                Co-occurring Mental Health
-              </TabsTrigger>
-            </TabsList>
-
-            {pathwaysContent.map((pathway, idx) => (
-              <TabsContent
-                key={idx}
-                value={pathway.name
-                  .toLowerCase()
-                  .replace(/\s+/g, "-")
-                  .replace(/[()]/g, "")}
-              >
-                <Card>
-                  <CardHeader>
-                    <CardTitle>{pathway.name} Pathway</CardTitle>
-                    <CardDescription>
-                      Tailored recovery support for specific needs
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-lg mb-6">{pathway.content}</p>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                      <div className="bg-white rounded-lg p-4 border border-blue-100">
-                        <h4 className="font-medium text-lg mb-2 text-blue-600">
-                          Key Components
-                        </h4>
-                        <ul className="space-y-2">
-                          {[1, 2, 3, 4].map((item) => (
-                            <li key={item} className="flex items-start">
-                              <CheckCircle className="h-5 w-5 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
-                              <span>
-                                Customized component for {pathway.name}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="bg-white rounded-lg p-4 border border-blue-100">
-                        <h4 className="font-medium text-lg mb-2 text-blue-600">
-                          Expected Outcomes
-                        </h4>
-                        <ul className="space-y-2">
-                          {[1, 2, 3, 4].map((item) => (
-                            <li key={item} className="flex items-start">
-                              <Star className="h-5 w-5 mr-2 mt-0.5 text-yellow-500 flex-shrink-0" />
-                              <span>
-                                Outcome specifically designed for {pathway.name}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </CardContent>
-                  <CardFooter>
-                    <Button className="w-full">
-                      Learn More About This Pathway
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </TabsContent>
-            ))}
-          </Tabs>
-        </div>
-      </section>
+      <RecoveryPathways activeSection={activeSection} />
 
       {/* Testimonials Section */}
       <section
