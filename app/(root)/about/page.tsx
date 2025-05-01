@@ -733,13 +733,13 @@ export default function AboutPage() {
               </Button>
               <Button
                 variant="outline"
-                className="text-white border-white hover:bg-blue-700"
+                className="text-black border-white hover:bg-blue-700"
               >
                 Volunteer
               </Button>
               <Button
                 variant="outline"
-                className="text-white border-white hover:bg-blue-700"
+                className="text-black border-white hover:bg-blue-700"
               >
                 Donate
               </Button>
