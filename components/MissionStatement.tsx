@@ -1,4 +1,3 @@
-// components/MissionStatement.js
 import Image from 'next/image';
 // import { motion } from 'framer-motion';
 
@@ -10,10 +9,10 @@ export default function MissionStatement() {
           {/* Image Side */}
           <div className="relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="/images/mission-image.jpg"
+              src="/images/recovery-woman.jpeg"
               alt="Young people in a supportive community setting"
               fill
-              className="object-cover"
+              className="object-cover h-full w-full"
             />
             
             {/* Overlapping Elements */}
@@ -31,7 +30,7 @@ export default function MissionStatement() {
           
           {/* Content Side */}
           <div className="lg:pl-10">
-            <h2 className="text-sm uppercase tracking-wider text-blue-600 font-semibold mb-2">Our Mission</h2>
+            <h2 className="text-sm uppercase tracking-wider text-blue-600 font-semibold mb-2">Notre Mission</h2>
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Empowering Youth Through Recovery and Beyond
             </h3>
