@@ -52,7 +52,7 @@ const featuredSuccessStories = [
         quote: "After struggling with substance use for years, I found a community that believed in me even when I didn't believe in myself. Today, I'm three years sober and helping others find their path to recovery.",
         testimonial: "Youth Recovery Alliance didn't just help me get sober — they helped me discover who I am and what I want from life. The combination of therapy, peer support, and life skills coaching gave me the tools I needed to build a future I'm excited about.",
         outcome: "Now pursuing a degree in social work and volunteering as a peer mentor",
-        image: "/api/placeholder/400/320",
+        image: "/images/recovery-man.jpeg",
         category: "individual"
     },
     {
@@ -63,7 +63,7 @@ const featuredSuccessStories = [
         quote: "We were desperate to help our daughter but didn't know how. The family program showed us how to support her recovery while healing our relationship.",
         testimonial: "The family engagement program transformed our understanding of addiction and recovery. We learned how to rebuild trust, set healthy boundaries, and truly listen to our daughter. Today, our family is stronger than ever.",
         outcome: "Family successfully reunited with improved communication and trust",
-        image: "/api/placeholder/400/320",
+        image: "/images/recovery-man.jpeg",
         category: "family"
     },
     {
@@ -74,7 +74,7 @@ const featuredSuccessStories = [
         quote: "Implementing the prevention and early intervention program at our school has dramatically reduced substance use incidents and improved student wellbeing.",
         testimonial: "The training provided to our counselors and teachers has enabled us to identify and support at-risk students earlier. The peer support component has been particularly effective at changing school culture around substance use.",
         outcome: "47% reduction in substance-related incidents over three years",
-        image: "/api/placeholder/400/320",
+        image: "/images/recovery-man.jpeg",
         category: "community"
     },
     {
@@ -85,7 +85,7 @@ const featuredSuccessStories = [
         quote: "After three failed treatment attempts elsewhere, the personalized approach at YRA finally helped me find sustainable recovery.",
         testimonial: "What made the difference was how the program adapted to my needs instead of trying to force me into a one-size-fits-all approach. From trauma therapy to vocational support, every aspect of my life was addressed in an integrated way.",
         outcome: "Now working as a recovery coach and pursuing entrepreneurship",
-        image: "/api/placeholder/400/320",
+        image: "/images/recovery-man.jpeg",
         category: "individual"
     }
 ];
@@ -141,7 +141,7 @@ export default function SuccessStoriesPage() {
 
             {/* Hero Section */}
             <Hero>
-                <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative">
+                <section className="flex items-center justify-center min-h-[50vh] overflow-hidden max-w-7xl mx-auto relative">
                     <div className="max-w-7xl mx-auto text-center">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -155,7 +155,7 @@ export default function SuccessStoriesPage() {
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
                                 Success Stories
                             </h1>
-                            <p className="text-lg md:text-xl text-slate-700 max-w-2xl mx-auto mb-8">
+                            <p className="text-lg md:text-xl text-slate-950 max-w-2xl mx-auto mb-8">
                                 For 20 years, we've been helping young people reclaim their lives from addiction.
                                 These are their stories of hope, resilience, and transformation.
                             </p>
