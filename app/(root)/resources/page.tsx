@@ -10,7 +10,6 @@ import {
     CardTitle,
     CardFooter,
 } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -24,7 +23,6 @@ import {
     FileText,
     Link as LinkIcon,
     Phone,
-    Bookmark,
     Calendar,
     Users,
     PhoneCall,
