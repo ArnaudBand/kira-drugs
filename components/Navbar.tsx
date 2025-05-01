@@ -15,7 +15,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
       isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
     }`}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
