@@ -282,7 +282,7 @@ export default function SuccessStoriesPage() {
             </section>
 
             {/* Journey Timeline Section */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8">
+            <section className="py-16 px-4 sm:px-6 lg:px-8 h-screen">
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-12 text-center">
                         <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Journey</h2>
@@ -297,7 +297,7 @@ export default function SuccessStoriesPage() {
                         <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 h-full w-px bg-blue-200"></div>
 
                         {/* Timeline items */}
-                        <div className="space-y-12">
+                        <div className="space-y-16">
                             {milestones.map((milestone, index) => (
                                 <div key={index} className="relative">
                                     <div className={`flex items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
@@ -385,13 +385,13 @@ export default function SuccessStoriesPage() {
                             </Button>
                             <Button
                                 variant="outline"
-                                className="text-white border-white hover:bg-blue-700"
+                                className="hover:text-white text-black border-white hover:bg-blue-700"
                             >
                                 Share Your Story
                             </Button>
                             <Button
                                 variant="outline"
-                                className="text-white border-white hover:bg-blue-700"
+                                className="hover:text-white text-black border-white hover:bg-blue-700"
                             >
                                 Support Our Work
                             </Button>
