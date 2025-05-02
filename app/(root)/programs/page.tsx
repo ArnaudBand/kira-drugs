@@ -491,7 +491,7 @@ export default function ProgramsPage() {
 
       {/* Hero Section */}
       <Hero>
-        <section className="flex items-center justify-center min-h-[50vh] overflow-hidden max-w-7xl mx-auto relative">
+      <section className="flex items-center justify-center pt-28 md:pt-36 pb-12 md:pb-16  overflow-hidden max-w-7xl mx-auto relative px-4 sm:px-6 lg:px-8">
           {/* Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-blue-100 blur-3xl opacity-30" />
