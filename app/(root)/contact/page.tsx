@@ -199,7 +199,7 @@ export default function ContactPage() {
 
             {/* Hero Section */}
             <Hero>
-                <section className="flex items-center justify-center min-h-[40vh] overflow-hidden max-w-7xl mx-auto relative">
+            <section className="flex items-center justify-center pt-28 md:pt-36 pb-12 md:pb-16  overflow-hidden max-w-7xl mx-auto relative px-4 sm:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto text-center">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
