@@ -238,11 +238,11 @@ export default function GetInvolvedPage() {
 
   return (
     <div className="relative min-h-screen">
-      <WavyBackground />
+      {/* <WavyBackground /> */}
 
       {/* Hero Section */}
       <Hero>
-        <section className="flex items-center justify-center min-h-[50vh] overflow-hidden max-w-7xl mx-auto relative">
+        <section className="flex items-center justify-center pt-28 md:pt-36 pb-12 md:pb-16  overflow-hidden max-w-7xl mx-auto relative px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -253,10 +253,10 @@ export default function GetInvolvedPage() {
                 <span className="w-2 h-2 rounded-full bg-blue-500 mr-2"></span>
                 Make a Difference Today
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
                 Get Involved
               </h1>
-              <p className="text-lg md:text-xl text-slate-950 max-w-2xl mx-auto mb-8">
+              <p className="text-base md:text-lg lg:text-xl text-slate-950 max-w-2xl mx-auto mb-8">
                 Join our mission to transform lives through youth recovery
                 support. Your time, talent, and resources can help young people
                 build sustainable futures.
@@ -277,7 +277,7 @@ export default function GetInvolvedPage() {
             </motion.div>
 
             {/* Ways to Get Involved Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-12 md:mt-16">
               {[
                 {
                   title: "Volunteer",
