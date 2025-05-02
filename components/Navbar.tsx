@@ -10,15 +10,20 @@ interface NavbarProps {
 export default function Navbar({ isScrolled }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
+  // Function to close the mobile menu
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+  
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+      isScrolled ? 'bg-white shadow-lg py-2' : 'bg-transparent py-4'
     }`}>
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2" onClick={closeMenu}>
               <div className="">
                 <div className='border rounded-full bg-amber-400 p-3 w-2 h-2' />
               </div>
@@ -29,7 +34,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             <NavLink href="/about" isScrolled={isScrolled}>About Us</NavLink>
             <NavLink href="/programs" isScrolled={isScrolled}>Our Programs</NavLink>
             <NavLink href="/resources" isScrolled={isScrolled}>Resources</NavLink>
@@ -41,7 +46,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
           </div>
           
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`focus:outline-none ${isScrolled ? 'text-blue-600' : 'text-white'}`}
@@ -61,14 +66,14 @@ export default function Navbar({ isScrolled }: NavbarProps) {
         
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden pt-4 pb-2">
+          <div className="lg:hidden pt-4 pb-2">
             <div className="flex flex-col space-y-3 bg-white rounded-lg p-4 shadow-lg">
-              <MobileNavLink href="/about">About Us</MobileNavLink>
-              <MobileNavLink href="/programs">Our Programs</MobileNavLink>
-              <MobileNavLink href="/resources">Resources</MobileNavLink>
-              <MobileNavLink href="/success-stories">Success Stories</MobileNavLink>
-              <MobileNavLink href="/get-involved">Get Involved</MobileNavLink>
-              <Link href="/contact" className="btn-primary-mobile w-full text-center">
+              <MobileNavLink href="/about" onClick={closeMenu}>About Us</MobileNavLink>
+              <MobileNavLink href="/programs" onClick={closeMenu}>Our Programs</MobileNavLink>
+              <MobileNavLink href="/resources" onClick={closeMenu}>Resources</MobileNavLink>
+              <MobileNavLink href="/success-stories" onClick={closeMenu}>Success Stories</MobileNavLink>
+              <MobileNavLink href="/get-involved" onClick={closeMenu}>Get Involved</MobileNavLink>
+              <Link href="/contact" className="btn-primary-mobile w-full text-center" onClick={closeMenu}>
                 Get Help Now
               </Link>
             </div>
@@ -102,11 +107,12 @@ function NavLink({ href, children, isScrolled }: NavLinkProps) {
 interface MobileNavLinkProps {
   href: string;
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
-function MobileNavLink({ href, children }: MobileNavLinkProps) {
+function MobileNavLink({ href, children, onClick }: MobileNavLinkProps) {
   return (
-    <Link href={href} className="text-gray-800 font-medium py-2 hover:text-blue-500 transition-colors">
+    <Link href={href} className="text-gray-800 font-medium py-2 hover:text-blue-500 transition-colors" onClick={onClick}>
       {children}
     </Link>
   );
