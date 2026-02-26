@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KiraDrugs Initiative – README
 
-## Getting Started
+## 📌 About the Organization
 
-First, run the development server:
+**KiraDrugs Initiative** is a youth-led association composed of individuals with lived experience of drug use, as well as friends, families, and community members affected directly or indirectly. The organization forms a vital network of people who understand the health, economic, and social challenges faced by people who use drugs.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+By working together, members are committed to improving the living conditions of youth in general—and users and former users in particular—through tailored support and assistance.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Mission
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+KiraDrugs Initiative aims to:
 
-## Learn More
+* Reduce risks associated with substance use
+* Support reintegration into society
+* Promote sustainable alternatives for a future free from dependency
 
-To learn more about Next.js, take a look at the following resources:
+Through a mobilized network of concerned individuals, the association raises awareness, provides guidance, and empowers youth facing health, economic, and social challenges related to substance use.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌍 Vision
 
-## Deploy on Vercel
+A generation of creative, autonomous, and inspiring young people committed to building a future free from harmful influences and addictions.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧭 Intervention Areas
+
+* Awareness and Prevention
+* Support and Assistance
+* Socio-Economic Reintegration
+
+---
+
+## 🛠 Activities
+
+### 1. Awareness and Prevention
+
+* Educating youth on risks and consequences of drug use
+* Organizing interactive campaigns, cultural events, and sports activities promoting healthy lifestyles
+* Promoting youth empowerment, entrepreneurship, and personal development as protective factors
+* Strengthening decision-making and leadership skills
+
+### 2. Support and Harm Reduction
+
+* Providing psychosocial support and tailored services
+* Facilitating access to prevention systems
+* Training youth ambassadors and peer educators for effective community outreach
+
+### 3. Social Reintegration and Empowerment
+
+* Developing vocational training and education programs
+* Supporting youth entrepreneurship through micro-financing and mentorship
+* Encouraging civic engagement and participation in local decision-making
+
+---
+
+## 📈 Impact Initiatives
+
+* Multimedia awareness campaigns (images, videos, discussions)
+* **Tubivuge** – *Guardians of Destinies* initiative
+* Radio and television programs
+* Monday prayer gatherings
+* Visits to rehabilitation and socio-economic reintegration centers
+* Psychosocial support programs
+
+---
+
+## 📍 Address
+
+**Location:** Bâtiment chez Ndongozi, Bureau N° ___
+*(To be completed)*
+
+---
+
+## 📚 Programs
+
+* Eight Link Program
+* KiraCreative Studio
+* School Clubs
+
+---
+
+## 🗂 Development Note
+
+This website and documentation may be progressively updated as new information, media, and program details become available.
+
+---
+
+## 📎 Media Submission
+
+Images and visual materials can be submitted either:
+
+* directly within the shared Google document, or
+* separately as individual files.
+
+---
+
+**Contact:** *(To be added)*
+**Website:** *(To be added)*
+
+---
+
+© KiraDrugs Initiative – All rights reserved.
