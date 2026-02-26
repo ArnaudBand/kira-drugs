@@ -5,89 +5,71 @@ import Link from 'next/link';
 
 export default function ProgramsOverview() {
   const [activeTab, setActiveTab] = useState<keyof typeof programs>('outpatient');
-  
+
   const programs = {
     outpatient: {
-      title: "Outpatient Recovery",
-      description: "Our flexible outpatient programs allow young people to maintain school, work, and family commitments while receiving structured support.",
+      title: "Sensibilisation et prévention",
+      description: "Nos programmes de sensibilisation et de prévention sont conçus pour éduquer les jeunes sur les risques liés à la consommation de drogues et pour promouvoir des choix de vie sains.",
       features: [
-        "Individual therapy with addiction specialists",
-        "Group counseling focused on peer support",
-        "Family therapy sessions",
-        "Evidence-based treatment approaches",
-        "Flexible scheduling for school/work compatibility"
+        "Informer et éduquer les jeunes sur les risques et les conséquences de la consommation de drogues.",
+        "Organiser des campagnes interactives et des activités culturelles et sportives pour promouvoir des modes de vie sains.",
+        "Mettre en avant l’autonomisation des jeunes, l’entrepreneuriat et le développement personnel comme facteurs de protection contre la consommation de drogues.",
+        "Renforcer les compétences en prise de décision et en leadership pour aider les jeunes à faire des choix positifs.",
       ],
       image: "/images/outpatient-program.jpeg"
     },
     residential: {
-      title: "Residential Treatment",
-      description: "Our residential program provides a safe, structured environment for young people who need intensive support at the beginning of their recovery journey.",
+      title: "Accompagnement et réduction des risques",
+      description: "Nos programmes résidentiels offrent un environnement thérapeutique structuré pour les jeunes qui ont besoin d’un soutien intensif pour surmonter leur addiction et reconstruire leur vie.",
       features: [
-        "24/7 support in a healing environment",
-        "Comprehensive assessment and personalized care",
-        "Academic support to continue education",
-        "Life skills development",
-        "Structured daily routines with therapeutic activities"
+        "Offrir un soutien psychosocial et des services adaptés aux jeunes en situation de consommation.",
+        "Faciliter l’accès à des dispositifs de prévention.",
+        "Former des jeunes ambassadeurs et des pairs éducateurs pour une sensibilisation efficace dans les communautés."
       ],
       image: "/images/residential-program.jpeg"
     },
     aftercare: {
-      title: "Aftercare & Continuing Support",
-      description: "Recovery is a lifelong journey. Our aftercare programs provide ongoing support as young people transition back to family, school, and community life.",
+      title: "Réinsertion sociale et autonomisation",
+      description: "Nos programmes de suivi et de réinsertion sociale aident les jeunes à maintenir leur sobriété à long terme et à reconstruire leur vie après le traitement initial.",
       features: [
-        "Alumni support groups",
-        "Mentorship opportunities",
-        "Educational and vocational guidance",
-        "Relapse prevention planning",
-        "Family support resources"
+        "Développer des programmes de formation professionnelle et d’éducation pour favoriser l’intégration socio-économique des jeunes vulnérables.",
+        "Accompagner les jeunes vers l’entrepreneuriat et l’innovation à travers des initiatives de microfinancement et de mentorat.",
+        "Encourager l’engagement citoyen et la participation aux décisions locales pour donner aux jeunes un rôle actif dans leur communauté.",
       ],
       image: "/images/aftercare-program.jpeg"
-    },
-    mentorship: {
-      title: "Peer Mentorship",
-      description: "Our unique peer mentorship program connects young people in recovery with trained mentors who have successfully navigated their own recovery journeys.",
-      features: [
-        "One-on-one support from peer mentors",
-        "Community building activities",
-        "Service opportunities",
-        "Leadership development",
-        "Healthy recreational activities"
-      ],
-      image: "/images/mentorship-program.jpeg"
     }
   };
-  
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-sm uppercase tracking-wider text-blue-600 font-semibold mb-2">Our Programs</h2>
+          <h2 className="text-sm uppercase tracking-wider text-blue-600 font-semibold mb-2">Nos Programmes</h2>
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Comprehensive Support for Every Stage of Recovery
+            Support Complet pour Chaque Phase du Processus de Récupération
           </h3>
           <p className="text-gray-600 text-lg">
-            We offer a range of programs designed to meet young people wherever they are in their recovery journey.
+            Nous offrons une gamme de programmes conçus pour répondre aux jeunes à chaque étape de leur parcours de récupération.
           </p>
         </div>
-        
+
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
           {Object.keys(programs).map((key) => (
             <button
               key={key}
               onClick={() => setActiveTab(key as keyof typeof programs)}
-              className={`px-4 py-2 rounded-full text-sm md:text-base font-medium transition-all ${
-                activeTab === key
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
-              }`}
+              className={`px-4 py-2 rounded-full text-sm md:text-base font-medium transition-all ${activeTab === key
+                ? 'bg-blue-600 text-white shadow-md'
+                : 'bg-white text-gray-700 hover:bg-gray-100'
+                }`}
             >
               {programs[key as keyof typeof programs].title}
             </button>
           ))}
         </div>
-        
+
         {/* Content Area */}
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -106,7 +88,7 @@ export default function ProgramsOverview() {
                 </h3>
               </div>
             </div>
-            
+
             {/* Content Side */}
             <div className="p-6 md:p-10">
               <h3 className="text-2xl font-bold text-gray-900 mb-4 hidden lg:block">
@@ -115,8 +97,8 @@ export default function ProgramsOverview() {
               <p className="text-gray-700 mb-6 text-lg">
                 {programs[activeTab].description}
               </p>
-              
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Program Features:</h4>
+
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">Caractéristiques du programme :</h4>
               <ul className="space-y-3 mb-8">
                 {programs[activeTab].features.map((feature, index) => (
                   <li key={index} className="flex items-start">
@@ -127,35 +109,17 @@ export default function ProgramsOverview() {
                   </li>
                 ))}
               </ul>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
                 <Link href={`/programs/${activeTab}`} className="btn-secondary">
-                  Learn More
+                  En savoir plus
                 </Link>
                 <Link href="/contact" className="btn-primary">
-                  Get Started
+                  Commencer votre parcours
                 </Link>
               </div>
             </div>
           </div>
-        </div>
-        
-        {/* Additional Info */}
-        <div className="mt-12 text-center">
-          <p className="text-gray-600">
-            All our programs are designed to be inclusive, trauma-informed, and culturally responsive.
-          </p>
-          <p className="text-gray-600 mt-2">
-            <span className="font-medium">Need help figuring out which program is right for you or your loved one?</span>{' '}
-            <Link href="/assessment" className="text-blue-600 hover:text-blue-800 font-medium">
-              Take our assessment
-            </Link>{' '}
-            or{' '}
-            <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">
-              contact us
-            </Link>{' '}
-            for a personalized recommendation.
-          </p>
         </div>
       </div>
     </section>

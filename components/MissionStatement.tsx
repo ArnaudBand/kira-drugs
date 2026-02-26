@@ -14,58 +14,61 @@ export default function MissionStatement() {
               fill
               className="object-cover h-full w-full"
             />
-            
+
             {/* Overlapping Elements */}
             <div className="absolute -bottom-6 -right-6 w-56 h-56 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full opacity-20"></div>
             <div className="absolute top-10 -left-8 w-24 h-24 bg-yellow-400 rounded-lg rotate-12 opacity-20"></div>
-            
+
             {/* Quote Overlay */}
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-900/80 to-transparent p-6">
               <blockquote className="text-white text-lg italic">
-                "Every young person deserves a chance to rewrite their story."
+                "Chaque jeune a droit à une nouvelle page pour écrire son histoire."
               </blockquote>
-              <p className="text-blue-100 text-sm mt-2">— Maria Chen, Founder</p>
+              <p className="text-blue-100 text-sm mt-2">— Aristide Mugisha, Founder</p>
             </div>
           </div>
-          
+
           {/* Content Side */}
           <div className="lg:pl-10">
             <h2 className="text-sm uppercase tracking-wider text-blue-600 font-semibold mb-2">Notre Mission</h2>
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Empowering Youth Through Recovery and Beyond
+              Accompagner les jeunes vers la guérison et un avenir meilleur
             </h3>
-            
+
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mb-8"></div>
-            
+
             <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-              At Kira Drugs, we believe that addiction recovery is not just about abstinence—it's about helping young people discover their strengths, rebuild relationships, and create meaningful futures.
+              L’Association KiraDrugs Initiative , se donne pour mission de réduire les risques liés à la consommation, de soutenir la réinsertion et de promouvoir des alternatives durables pour un avenir sans dépendances.
             </p>
-            
+
             <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-              Our integrated approach combines evidence-based treatment, peer support, life skills development, and family healing to address the whole person—mind, body, and spirit.
+              En mobilisant un réseau de personnes concernées, l’association agit pour sensibiliser, accompagner et autonomiser les jeunes en proie aux défis sanitaires, économiques et sociaux liés à l’usage des substances.
             </p>
-            
+
             {/* Core Values */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-              <CoreValue 
+              <CoreValue
                 icon={<CompassIcon />}
-                title="Compassion First"
-                description="We meet young people where they are, without judgment, creating safe spaces for healing."
+                title="La compassion avant tout"
+                description="Nous rencontrons les jeunes là où ils en sont, sans jugement, en créant des espaces sûrs propices à la guérison."
               />
-              <CoreValue 
+
+              <CoreValue
                 icon={<EvidenceIcon />}
-                title="Evidence-Based"
-                description="Our programs integrate the latest research in adolescent addiction recovery."
+                title="Fondé sur des données probantes"
+                description="Nos programmes intègrent les recherches les plus récentes sur le rétablissement des adolescents face aux addictions."
               />
-              <CoreValue 
+
+              <CoreValue
                 icon={<CommunityIcon />}
-                title="Community-Centered"
-                description="We believe healing happens in connection with others who understand."
+                title="Centré sur la communauté"
+                description="Nous croyons que la guérison se produit dans le lien avec d’autres personnes qui comprennent."
               />
-              <CoreValue 
+
+              <CoreValue
                 icon={<GrowthIcon />}
-                title="Growth-Oriented"
-                description="Recovery is a journey of continuous growth and discovering one's potential."
+                title="Orienté vers la croissance"
+                description="Le rétablissement est un parcours de croissance continue et de découverte de son potentiel."
               />
             </div>
           </div>

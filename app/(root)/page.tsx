@@ -1,20 +1,16 @@
 "use client";
 
-// import { useState, useEffect } from "react";
 
 // Component imports
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import MissionStatement from "@/components/MissionStatement";
 import ProgramsOverview from "@/components/ProgramsOverview";
-import SuccessStories from "../../components/SuccessStories";
+// import SuccessStories from "../../components/SuccessStories";
 import StatsCounter from "../../components/StatsCounter";
-import ResourcesSection from "../../components/ResourcesSection";
+// import ResourcesSection from "../../components/ResourcesSection";
 import ContactCTA from "../../components/ContactCTA";
-import Footer from "../../components/Footer";
-import { Link } from "lucide-react";
-import {useRouter} from "next/navigation";
-import {Button} from "@/components/ui/button";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const router = useRouter();
@@ -31,12 +27,11 @@ export default function Home() {
           <div className="container mx-auto px-4 md:px-6 z-10">
             <div className="md:max-w-3xl lg:max-w-4xl">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-                A New <span className="text-blue-300">Beginning</span> Is
+                Un Nouveau <span className="text-blue-300">Départ</span> Est
                 Possible
               </h1>
               <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-2xl">
-                Supporting young people on their journey to recovery through
-                compassion, community, and evidence-based programs.
+                Accompagner les jeunes sur le chemin du rétablissement par la compassion, l’entraide communautaire et des programmes basés sur des preuves.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -58,13 +53,13 @@ export default function Home() {
                   </svg>
                 </Button>
                 <Button onClick={() => router.push("/programs")} className="bg-white/85 text-black/60 hover:text-white">
-                  <span>Our Programs</span>
+                  <span>Nos Programmes</span>
                 </Button>
               </div>
 
               <div className="mt-12 md:mt-16 flex items-center">
                 <p className="text-blue-100 mr-6">
-                  Contact:
+                  Contacte:
                 </p>
                 <a
                   href="tel:25762682648"
@@ -89,8 +84,8 @@ export default function Home() {
         <MissionStatement />
         <StatsCounter />
         <ProgramsOverview />
-        <SuccessStories />
-        <ResourcesSection />
+        {/* <SuccessStories />
+        <ResourcesSection /> */}
         <ContactCTA />
       </main>
     </div>

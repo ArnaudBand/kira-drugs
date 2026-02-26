@@ -125,7 +125,7 @@ export default function AboutPage() {
               <div className="mb-6">
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
                   <span className="w-2 h-2 rounded-full bg-indigo-500 mr-2"></span>
-                  Making a difference since 2005
+                  Making a difference since 2020
                 </span>
               </div>
 
@@ -134,15 +134,13 @@ export default function AboutPage() {
                 id="hero-heading"
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 tracking-tight leading-tight"
               >
-                <span className="block">Empowering Youth</span>
-                <span className="block text-white">Through Recovery</span>
+                <span className="block">Autonomiser les jeunes</span>
+                <span className="block text-white">grâce au rétablissement</span>
               </h1>
 
               {/* Subheading with improved readability */}
-              <p className="text-lg md:text-xl text-slate-700 mb-10 max-w-2xl leading-relaxed">
-                At Youth Recovery Alliance, we believe in the power of
-                community, compassion, and evidence-based practices to help
-                young people reclaim their lives from addiction.
+              <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl leading-relaxed">
+                At KiraDrugs Initiative, nous croyons au pouvoir de la communauté, de la compassion et des pratiques fondées sur des données probantes pour aider les jeunes à reprendre leur vie en main face à l’addiction.
               </p>
 
               {/* CTA Section with Multiple Actions */}
@@ -150,16 +148,16 @@ export default function AboutPage() {
                 <button
                   onClick={() => scrollToSection("mission")}
                   className="px-8 py-4 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                  aria-label="Learn more about our mission"
+                  aria-label="En savoir plus sur notre mission"
                 >
-                  Learn More
+                  En savoir plus
                 </button>
                 <button
                   onClick={() => scrollToSection("contact")}
                   className="px-8 py-4 rounded-lg bg-white text-indigo-600 border border-indigo-200 font-medium hover:bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                  aria-label="Contact us for assistance"
+                  aria-label="Obtenir de l'aide maintenant"
                 >
-                  Get Support
+                  Obtenir De L'Aide
                 </button>
               </div>
             </div>
@@ -168,7 +166,7 @@ export default function AboutPage() {
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
             <span className="text-sm text-slate-500 mb-2">
-              Scroll to explore
+              Scroll to learn more
             </span>
             <svg
               className="w-6 h-6 text-slate-400"
@@ -191,15 +189,14 @@ export default function AboutPage() {
       {/* Mission Section */}
       <section
         id="mission"
-        className={`py-16 px-4 sm:px-6 lg:px-8 bg-blue-50 ${
-          activeSection === "mission" ? "scroll-mt-16" : ""
-        }`}
+        className={`py-16 px-4 sm:px-6 lg:px-8 bg-blue-50 ${activeSection === "mission" ? "scroll-mt-16" : ""
+          }`}
       >
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                Our Mission
+                Notre Mission
               </h2>
               <div className="w-20 h-1 bg-blue-500 mb-6"></div>
             </div>
@@ -208,35 +205,19 @@ export default function AboutPage() {
 
           <div className="prose prose-lg max-w-none text-slate-700">
             <p>
-              At Youth Recovery Alliance, our mission is to provide
-              compassionate, evidence-based support to young people struggling
-              with substance use disorders, helping them reclaim their lives and
-              fulfill their potential.
+              L’Association KiraDrugs Initiative, se donne pour mission de réduire les risques liés à la consommation, de soutenir la réinsertion et de promouvoir des alternatives durables pour un avenir sans dépendances.
             </p>
             <p>
-              We believe that every young person deserves the opportunity to
-              live a healthy, purposeful life free from addiction. Through our
-              holistic approach, we address not just the addiction itself, but
-              the underlying factors that contribute to substance use, including
-              mental health challenges, trauma, and social determinants of
-              health.
-            </p>
-            <p>
-              Our organization was founded in 2005 by a group of recovery
-              professionals, mental health specialists, and parents who
-              recognized the critical need for youth-specific recovery services.
-              Since then, we've grown to serve communities nationwide while
-              maintaining our commitment to personalized care and positive
-              outcomes.
+              En mobilisant un réseau de personnes concernées, l’association agit pour sensibiliser, accompagner et autonomiser les jeunes en proie aux défis sanitaires, économiques et sociaux liés à l’usage des substances.
             </p>
           </div>
 
           <div className="mt-12">
             <Tabs defaultValue="values" className="w-full">
               <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="values">Our Values</TabsTrigger>
-                <TabsTrigger value="vision">Our Vision</TabsTrigger>
-                <TabsTrigger value="history">Our History</TabsTrigger>
+                <TabsTrigger value="values">Nos Valeurs</TabsTrigger>
+                <TabsTrigger value="vision">Notre Vision</TabsTrigger>
+                <TabsTrigger value="history">Notre Histoire</TabsTrigger>
               </TabsList>
               <TabsContent value="values" className="pt-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -277,19 +258,7 @@ export default function AboutPage() {
                 <Card>
                   <CardContent className="pt-6">
                     <p className="text-lg mb-4">
-                      We envision a world where every young person has access to
-                      the support, resources, and community they need to
-                      overcome addiction and thrive.
-                    </p>
-                    <p className="text-lg mb-4">
-                      Our vision includes communities where prevention is
-                      prioritized, early intervention is readily available, and
-                      recovery is celebrated and supported.
-                    </p>
-                    <p className="text-lg">
-                      We strive to be at the forefront of youth recovery
-                      services, continually evolving our approaches based on
-                      research, outcomes, and the voices of those we serve.
+                      Une génération de jeunes créatifs, autonomes et inspirants, engagés à bâtir un avenir éloigné des influences néfastes et des dépendances.
                     </p>
                   </CardContent>
                 </Card>
@@ -301,7 +270,7 @@ export default function AboutPage() {
                       <li className="flex items-start">
                         <Calendar className="h-5 w-5 mr-2 mt-1 flex-shrink-0 text-blue-500" />
                         <div>
-                          <span className="font-medium">2005:</span> Founded by
+                          <span className="font-medium">2020:</span> Founded by
                           a coalition of recovery professionals, mental health
                           specialists, and parents of youth in recovery.
                         </div>
@@ -357,9 +326,8 @@ export default function AboutPage() {
       {/* Approach Section */}
       <section
         id="approach"
-        className={`py-16 px-4 sm:px-6 lg:px-8 ${
-          activeSection === "approach" ? "scroll-mt-16" : ""
-        }`}
+        className={`py-16 px-4 sm:px-6 lg:px-8 ${activeSection === "approach" ? "scroll-mt-16" : ""
+          }`}
       >
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
@@ -599,9 +567,8 @@ export default function AboutPage() {
       {/* Impact Section */}
       <section
         id="impact"
-        className={`py-16 px-4 sm:px-6 lg:px-8 bg-blue-50 ${
-          activeSection === "impact" ? "scroll-mt-16" : ""
-        }`}
+        className={`py-16 px-4 sm:px-6 lg:px-8 bg-blue-50 ${activeSection === "impact" ? "scroll-mt-16" : ""
+          }`}
       >
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">

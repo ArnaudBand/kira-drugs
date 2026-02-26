@@ -81,14 +81,14 @@ const ProgramCard = ({ program }: { program: any }) => {
       <CardContent>
         <p className="text-slate-700">{program.description}</p>
         {program.features && (
-            <ul className="mt-4 space-y-2">
+          <ul className="mt-4 space-y-2">
             {program.features.map((feature: string, idx: number) => (
               <li key={idx} className="flex items-start">
-              <CheckCircle className="h-5 w-5 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
-              <span>{feature}</span>
+                <CheckCircle className="h-5 w-5 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
+                <span>{feature}</span>
               </li>
             ))}
-            </ul>
+          </ul>
         )}
       </CardContent>
       <CardFooter>
@@ -129,14 +129,14 @@ const TestimonialCard = ({ quote, author, role, image }: { quote: string; author
   </Card>
 );
 
-const RecoveryPathways = ({ activeSection }: { activeSection: string}) => {
+const RecoveryPathways = ({ activeSection }: { activeSection: string }) => {
   // Comprehensive pathways data with unique content for each tab
   const pathwaysContent = [
     {
       id: "youth",
       name: "Youth (14-17)",
       content:
-          "Our adolescent pathway is designed with appropriate supervision, educational support, and family integration. Treatment approaches are developmentally tailored with an emphasis on identity formation, peer relationships, and appropriate independence.",
+        "Our adolescent pathway is designed with appropriate supervision, educational support, and family integration. Treatment approaches are developmentally tailored with an emphasis on identity formation, peer relationships, and appropriate independence.",
       components: [
         "Age-appropriate group therapy sessions",
         "School coordination and academic support",
@@ -156,7 +156,7 @@ const RecoveryPathways = ({ activeSection }: { activeSection: string}) => {
       id: "young-adults",
       name: "Young Adults (18-25)",
       content:
-          "Our young adult pathway balances autonomy with support. It focuses on life transitions, career development, and adult relationship skills while addressing the unique neurological and social development happening during this formative period.",
+        "Our young adult pathway balances autonomy with support. It focuses on life transitions, career development, and adult relationship skills while addressing the unique neurological and social development happening during this formative period.",
       components: [
         "Life skills training for independent living",
         "Career exploration and vocational support",
@@ -176,7 +176,7 @@ const RecoveryPathways = ({ activeSection }: { activeSection: string}) => {
       id: "early",
       name: "Early Recovery",
       content:
-          "For those just beginning their recovery journey, this pathway provides stability, intensive support, and foundation-building. It focuses on safety, immediate needs, withdrawal management, and establishing basic recovery skills.",
+        "For those just beginning their recovery journey, this pathway provides stability, intensive support, and foundation-building. It focuses on safety, immediate needs, withdrawal management, and establishing basic recovery skills.",
       components: [
         "Intensive monitoring and support structure",
         "Basic recovery skills development",
@@ -196,7 +196,7 @@ const RecoveryPathways = ({ activeSection }: { activeSection: string}) => {
       id: "sustained",
       name: "Sustained Recovery",
       content:
-          "For those with some recovery time, this pathway focuses on growth, purpose development, and building a meaningful life in recovery. It emphasizes education, career, relationships, and deeper healing work.",
+        "For those with some recovery time, this pathway focuses on growth, purpose development, and building a meaningful life in recovery. It emphasizes education, career, relationships, and deeper healing work.",
       components: [
         "Advanced recovery skill development",
         "Deeper trauma healing work",
@@ -216,7 +216,7 @@ const RecoveryPathways = ({ activeSection }: { activeSection: string}) => {
       id: "co-occurring",
       name: "Co-occurring Mental Health",
       content:
-          "This specialized pathway integrates mental health treatment with addiction recovery services. It provides coordinated care for young people dealing with both substance use disorders and mental health challenges.",
+        "This specialized pathway integrates mental health treatment with addiction recovery services. It provides coordinated care for young people dealing with both substance use disorders and mental health challenges.",
       components: [
         "Integrated mental health and substance use treatment",
         "Medication management when appropriate",
@@ -235,93 +235,92 @@ const RecoveryPathways = ({ activeSection }: { activeSection: string}) => {
   ];
 
   return (
-      <section
-          id="pathways"
-          className={`py-16 px-4 sm:px-6 lg:px-8 bg-blue-50 ${
-              activeSection === "pathways" ? "scroll-mt-16" : ""
-          }`}
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
-            <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                Recovery Pathways
-              </h2>
-              <div className="w-20 h-1 bg-blue-500 mb-6"></div>
-            </div>
-            <Coffee className="h-16 w-16 text-blue-500 mt-4 md:mt-0" />
+    <section
+      id="pathways"
+      className={`py-16 px-4 sm:px-6 lg:px-8 bg-blue-50 ${activeSection === "pathways" ? "scroll-mt-16" : ""
+        }`}
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
+          <div>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Recovery Pathways
+            </h2>
+            <div className="w-20 h-1 bg-blue-500 mb-6"></div>
           </div>
-
-          <div className="mb-10">
-            <p className="text-lg text-slate-700 mb-8">
-              We recognize that recovery isn't one-size-fits-all. Our pathways
-              approach allows us to tailor our services to meet specific needs
-              based on age, recovery stage, and co-occurring conditions.
-            </p>
-          </div>
-
-          <Tabs defaultValue="youth" className="w-full">
-            <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 mb-8">
-              {pathwaysContent.map((pathway) => (
-                  <TabsTrigger key={pathway.id} value={pathway.id} className={'cursor-pointer'}>
-                    {pathway.name}
-                  </TabsTrigger>
-              ))}
-            </TabsList>
-
-            {pathwaysContent.map((pathway) => (
-                <TabsContent key={pathway.id} value={pathway.id}>
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>{pathway.name} Pathway</CardTitle>
-                      <CardDescription>
-                        Tailored recovery support for specific needs
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-lg mb-6">{pathway.content}</p>
-
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                        <div className="bg-white rounded-lg p-4 border border-blue-100">
-                          <h4 className="font-medium text-lg mb-2 text-blue-600">
-                            Key Components
-                          </h4>
-                          <ul className="space-y-2">
-                            {pathway.components.map((component, index) => (
-                                <li key={index} className="flex items-start">
-                                  <CheckCircle className="h-5 w-5 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
-                                  <span>{component}</span>
-                                </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        <div className="bg-white rounded-lg p-4 border border-blue-100">
-                          <h4 className="font-medium text-lg mb-2 text-blue-600">
-                            Expected Outcomes
-                          </h4>
-                          <ul className="space-y-2">
-                            {pathway.outcomes.map((outcome, index) => (
-                                <li key={index} className="flex items-start">
-                                  <Star className="h-5 w-5 mr-2 mt-0.5 text-yellow-500 flex-shrink-0" />
-                                  <span>{outcome}</span>
-                                </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </CardContent>
-                    <CardFooter>
-                      <Button className="w-full">
-                        Learn More About This Pathway
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </TabsContent>
-            ))}
-          </Tabs>
+          <Coffee className="h-16 w-16 text-blue-500 mt-4 md:mt-0" />
         </div>
-      </section>
+
+        <div className="mb-10">
+          <p className="text-lg text-slate-700 mb-8">
+            We recognize that recovery isn't one-size-fits-all. Our pathways
+            approach allows us to tailor our services to meet specific needs
+            based on age, recovery stage, and co-occurring conditions.
+          </p>
+        </div>
+
+        <Tabs defaultValue="youth" className="w-full">
+          <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 mb-8">
+            {pathwaysContent.map((pathway) => (
+              <TabsTrigger key={pathway.id} value={pathway.id} className={'cursor-pointer'}>
+                {pathway.name}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
+          {pathwaysContent.map((pathway) => (
+            <TabsContent key={pathway.id} value={pathway.id}>
+              <Card>
+                <CardHeader>
+                  <CardTitle>{pathway.name} Pathway</CardTitle>
+                  <CardDescription>
+                    Tailored recovery support for specific needs
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-lg mb-6">{pathway.content}</p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <div className="bg-white rounded-lg p-4 border border-blue-100">
+                      <h4 className="font-medium text-lg mb-2 text-blue-600">
+                        Key Components
+                      </h4>
+                      <ul className="space-y-2">
+                        {pathway.components.map((component, index) => (
+                          <li key={index} className="flex items-start">
+                            <CheckCircle className="h-5 w-5 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
+                            <span>{component}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="bg-white rounded-lg p-4 border border-blue-100">
+                      <h4 className="font-medium text-lg mb-2 text-blue-600">
+                        Expected Outcomes
+                      </h4>
+                      <ul className="space-y-2">
+                        {pathway.outcomes.map((outcome, index) => (
+                          <li key={index} className="flex items-start">
+                            <Star className="h-5 w-5 mr-2 mt-0.5 text-yellow-500 flex-shrink-0" />
+                            <span>{outcome}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button className="w-full">
+                    Learn More About This Pathway
+                  </Button>
+                </CardFooter>
+              </Card>
+            </TabsContent>
+          ))}
+        </Tabs>
+      </div>
+    </section>
   );
 };
 
@@ -491,7 +490,7 @@ export default function ProgramsPage() {
 
       {/* Hero Section */}
       <Hero>
-      <section className="flex items-center justify-center pt-28 md:pt-36 pb-12 md:pb-16  overflow-hidden max-w-7xl mx-auto relative px-4 sm:px-6 lg:px-8">
+        <section className="flex items-center justify-center pt-28 md:pt-36 pb-12 md:pb-16  overflow-hidden max-w-7xl mx-auto relative px-4 sm:px-6 lg:px-8">
           {/* Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-blue-100 blur-3xl opacity-30" />
@@ -511,15 +510,13 @@ export default function ProgramsPage() {
 
               {/* Main Heading with Animation Class */}
               <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                <span className="block">Our Comprehensive</span>
-                <span className="block text-blue-600">Recovery Programs</span>
+                <span className="block">Nos programmes complets</span>
+                <span className="block text-blue-600">de rétablissement</span>
               </h1>
 
               {/* Subheading with improved readability */}
-              <p className="text-lg md:text-xl text-slate-700 mb-10 max-w-2xl leading-relaxed">
-                We offer a range of evidence-based programs tailored to the
-                unique needs of young people at different stages of their
-                recovery journey.
+              <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl leading-relaxed">
+                Nous proposons une gamme de programmes fondés sur des données probantes, adaptés aux besoins uniques des jeunes à différentes étapes de leur parcours de rétablissement.
               </p>
 
               {/* CTA Section with Multiple Actions */}
@@ -528,13 +525,13 @@ export default function ProgramsPage() {
                   onClick={() => scrollToSection("core-programs")}
                   className="px-8 py-4 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors"
                 >
-                  Explore Programs
+                  Explore Programmes
                 </Button>
                 <Button
                   onClick={() => scrollToSection("get-started")}
                   className="px-8 py-4 rounded-lg bg-white text-blue-600 border border-blue-200 font-medium hover:bg-blue-50 transition-colors"
                 >
-                  Get Started
+                  Comment Commencer
                 </Button>
               </div>
             </div>
@@ -545,9 +542,8 @@ export default function ProgramsPage() {
       {/* Core Programs Section */}
       <section
         id="core-programs"
-        className={`py-16 px-4 sm:px-6 lg:px-8 ${
-          activeSection === "core-programs" ? "scroll-mt-16" : ""
-        }`}
+        className={`py-16 px-4 sm:px-6 lg:px-8 ${activeSection === "core-programs" ? "scroll-mt-16" : ""
+          }`}
       >
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
@@ -579,9 +575,8 @@ export default function ProgramsPage() {
       {/* Testimonials Section */}
       <section
         id="testimonials"
-        className={`py-16 px-4 sm:px-6 lg:px-8 ${
-          activeSection === "testimonials" ? "scroll-mt-16" : ""
-        }`}
+        className={`py-16 px-4 sm:px-6 lg:px-8 ${activeSection === "testimonials" ? "scroll-mt-16" : ""
+          }`}
       >
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
@@ -625,9 +620,8 @@ export default function ProgramsPage() {
       {/* Program Details Section */}
       <section
         id="program-details"
-        className={`py-16 px-4 sm:px-6 lg:px-8 bg-blue-50 ${
-          activeSection === "program-details" ? "scroll-mt-16" : ""
-        }`}
+        className={`py-16 px-4 sm:px-6 lg:px-8 bg-blue-50 ${activeSection === "program-details" ? "scroll-mt-16" : ""
+          }`}
       >
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
@@ -780,9 +774,8 @@ export default function ProgramsPage() {
       {/* Get Started Section */}
       <section
         id="get-started"
-        className={`py-16 px-4 sm:px-6 lg:px-8 ${
-          activeSection === "get-started" ? "scroll-mt-16" : ""
-        }`}
+        className={`py-16 px-4 sm:px-6 lg:px-8 ${activeSection === "get-started" ? "scroll-mt-16" : ""
+          }`}
       >
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-8 md:p-12">
